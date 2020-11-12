@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  background: url("car.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-container {
+  margin: 0;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: clamp(300px, 800px)
+}
+
+.nav-container ul {
+  display: flex;
+}
+
+.nav-container li {
+  margin: 0.2rem 0.2rem;
+  font-size: max(0.5rem, 0.25vw)
+}
+
+.nav-container a {
+  color:black;
+  display: flex;
+  font-size: max(1rem, 2vw);
+}
+
+.drop-down {
+  display: none;
+  position: absolute;
+  top: 45px;
+  z-index: 0;
+  padding: max(0.5rem, 0.25vw);
+  height: auto; 
+  width: auto;
+  font-size: auto;
+  background-color:  rgb(235, 198, 167);
+}
+
+.app:hover .drop-down{
+  display: block;
+}
+
+.title-container {
+  width: clamp(300px, 50%, 700px);
+  margin: max(10vw, 30px);
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title-container h1 {
+  color: rgb(140, 67, 45);
+}
+
+.appointment {
+  width: 10rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(235, 198, 167);
+  color: rgb(140, 67, 45);
+}
+
+.main-footer {
+  margin: 0;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(235, 198, 167);
+}
