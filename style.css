@@ -63,7 +63,13 @@ li {
   height: auto; 
   width: auto;
   font-size: max(1rem, 1vw);
-  background-color:  rgb(235, 198, 167);
+  background-color:  rgb(235, 198, 167); 
+}
+
+.app-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
 
 .app:hover .drop-down{
