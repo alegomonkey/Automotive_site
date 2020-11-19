@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none
+}
+
 li {
   list-style: none;
   margin: 0;
@@ -9,8 +13,8 @@ li {
 }
 
 .main-container {
-  background: url("car.webp");
-  height: 600px;
+  background: url("./car.webp");
+  height: 90vh;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -30,6 +34,11 @@ li {
 .logo-container {
   display: flex;
   align-items: center;
+  font-size: max(1rem, 2vw);
+}
+
+.nav-replace {
+  display: none;
 }
 
 .nav-container {
@@ -44,14 +53,13 @@ li {
 }
 
 .nav-container li {
-  margin: 0.2rem 0.2rem;
-  font-size: max(0.5rem, 0.25vw)
+  margin: 0.5rem 0.5rem;
 }
 
 .nav-container a {
   color:black;
   display: flex;
-  font-size: max(1rem, 1vw);
+  font-size: max(1rem, 2vw);
 }
 
 .drop-down {
@@ -62,7 +70,6 @@ li {
   padding: max(0.5rem, 0.25vw);
   height: auto; 
   width: auto;
-  font-size: max(1rem, 1vw);
   background-color:  rgb(235, 198, 167); 
 }
 
@@ -72,25 +79,32 @@ li {
   padding: 0;
 }
 
+.app-info li {
+  font-size: max(1rem, 1vw);  
+}
+
 .app:hover .drop-down{
   display: block;
 }
 
 .title-container {
-  width: clamp(300px, 50%, 700px);
-  margin: max(10vw, 30px);
+  width: clamp(400px, 50%, 700px);
+  margin: max(5vw, 25px);
   display: flex; 
   flex-direction: column;
   align-items: flex-start;
 }
 
 .title-container h1 {
+  font-size: max(3rem, 2vw);
   color: rgb(140, 67, 45);
 }
 
+.title-container p {
+  font-size: max(2rem, 2vw)
+}
+
 .appointment {
-  width: 10rem;
-  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,4 +120,53 @@ li {
   justify-content: space-between;
   align-items: flex-end;
   background-color: rgb(235, 198, 167);
+}
+
+@media screen and (max-width: 1024px) {
+  
+  .logo-container {
+    font-size: max(0.8rem, 0.5vw);
+  }
+  .nav-container a {
+    font-size: max(0.8rem, 0.5vw);
+  }
+  
+  .app-info li {
+    font-size: max(0.8rem, 0.5vw);  
+  }
+
+  .title-container h1 {
+    font-size: max(1.2rem, 1vw);
+  }
+
+  .title-container p {
+    font-size: max(1rem, 1vw)
+  }
+
+  .main-footer {
+    font-size: max(0.5rem, 0.5vw)
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-container{
+    display: none;
+  }
+
+  .nav-replace {
+    display: flex;
+  }
+
+    .app-info li {
+    font-size: max(0.5rem, 0.5vw);  
+  }
+
+  .title-container h1 {
+    font-size: max(0.5rem, 1vw);
+  }
+
+  .title-container p {
+    font-size: max(0.8rem, 1vw)
+  }
+
 }
